@@ -1,12 +1,12 @@
 package com.example.intermediate.controller;
 
-import com.example.intermediate.configuration.ResponseDto;
+import com.example.intermediate.controller.response.ResponseDto;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-public class CustomeExceptionHandler {
+public class CustomExceptionHandler {
 
   @ExceptionHandler(MethodArgumentNotValidException.class)
   public ResponseDto<?> handleValidationExceptions(MethodArgumentNotValidException exception) {
